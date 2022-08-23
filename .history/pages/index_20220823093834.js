@@ -9,12 +9,6 @@ import { useRef } from 'react';
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
-  function search(event){
-    event.preventDefault();
-    const term = searchInputRef.current.value;
-    if(!term.trim()) return
-    router.push(`/search?term=${term.trim()}&searchType=`);
-  }
   return (
     <div>
       <Head>
@@ -43,7 +37,7 @@ export default function Home() {
           <MicrophoneIcon className="h-5"/>
         </div>
         <div className="flex flex-col sm:flex-row w-[50%] space-y-0 mt-8 sm:space-x-4 justify-center">
-          <button onClick={search} className='btn'>Google Search</button>
+          <button className='btn'>Google Search</button>
           <button className='btn'>I'm Feeling Lucky</button>
         </div>
     </form>
