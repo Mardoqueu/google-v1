@@ -5,6 +5,7 @@ import Response from "../Response";
 import {useRouter} from "next/router";
 import ImageResults from "../components/ImageResult";
 
+
 export default function search({results}){
     console.log(results);
     const router = useRouter()
@@ -15,22 +16,18 @@ export default function search({results}){
             </Head>
 
             {/*Search Header*/}
-             <SearchHeader/>
-
-            {/*Search Result and Images Results*/}
             {router.query.searchType === "image" ? (
         <ImageResults results={results} />
       ) : (
         <SearchResults results={results} />
       )}
-
         </div>
     )
 }
 
 export async function getServerSideProps(context) {
     const startIndex = context.query.start || "1";
-    const mockData = false;
+    const mockData = true;
     const data = mockData
       ? Response
       : await fetch(
