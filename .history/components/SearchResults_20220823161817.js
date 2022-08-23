@@ -1,6 +1,9 @@
 import React from "react";
 import Parser from "html-react-parser"
+<<<<<<< HEAD
 import PaginationButtons from "./PaginationButtons";
+=======
+>>>>>>> 674bbf872b999ce7c0bb93eaec09f1bb6e329878
 
 export default function SearchResults({results}){
     return(
