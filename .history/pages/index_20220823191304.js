@@ -16,13 +16,11 @@ export default function Home() {
     router.push(`/search?term=${term.trim()}&searchType=`);
   }
 
-  async function randomSearch(event) {
+  async function randomSearch(event){
     event.preventDefault();
-    const randomTerm = await fetch(
-      "https://random-word-api.herokuapp.com/word?number=1"
-    ).then((response) => response.json());
-    if (!randomTerm) return;
-    router.push(`/search?term=${randomTerm}&searchType=`);
+    const randomTerm = await fetch("https://random-word-api.herokuapp.com/word?number=1").then((response)=> response.json());
+    if(!term) return
+    router.push(`/search?term=${term}&searchType=`);
   }
   return (
     <div>
