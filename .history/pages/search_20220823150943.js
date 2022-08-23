@@ -6,11 +6,10 @@ import {useRouter} from "next/router";
 
 export default function search({results}){
     console.log(results);
-    const router = useRouter()
     return (
         <div>
             <Head>
-                <title>{router.query.term} - Search page</title>
+                <title>Search</title>
             </Head>
 
             {/*Search Header*/}
