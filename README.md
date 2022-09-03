@@ -1,3 +1,14 @@
+Google Clone
+
+➣style with Tailwind CSS
+
+➣authenticate using next-auth
+
+➣use google search api
+
+➣include web and image search
+
+
 ![Screenshot_8](https://user-images.githubusercontent.com/11077068/187298944-9a80caa4-b5e1-4e77-a051-c381ddc05921.png)
 
 
